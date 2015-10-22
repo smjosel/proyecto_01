@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Formulario Animalear</title>
+		<style type="text/css">
+		p{font-size:20px;font-family:'kermelmedium';color:black;font-weight:bold;}
+		.titulo{font-size:16px;font-family:'kermelmedium';color:black;font-weight:bold;margin-top:3px;}
+		.titulo2{font-size:20px;font-family:'kermelmedium';color:black;font-weight:bold;margin-top:3px;}
+		 #formulario{position:absolute;top:50px;left:150px;width:500px;height:300px;clip:rect(0px,500px,300px,0px);background-color:#dd4b3b;layer-background-color:#336600;}
+
+ 
+		</style>
+		<script language="JavaScript" type="text/javascript">
+		  function animal(tick){
+			var sel=document.getElementsByName(tick.name);
+			document.getElementById('perros').style.display=(sel[0].checked)?'block':'none' ;
+			document.getElementById('gatos').style.display=(sel[1].checked)?'block':'none' ;
+			document.getElementById('pajaros').style.display=(sel[2].checked)?'block':'none' ;
+			document.getElementById('otros').style.display=(sel[3].checked)?'block':'none' ;
+			}
+		function reiniciar(){
+			document.getElementById('perros').style.display='none';
+			document.getElementById('gatos').style.display='none';
+			document.getElementById('pajaros').style.display='none';
+			document.getElementById('otros').style.display='none';
+		}
+		</script>
+	</head>
+	<body>
+		<div id="formulario">
+		<p class="titulo2" align="center">Animales perdidos</p>
+		<form action="animalear_bd.php" method="GET">
+			<table>
+				<tr>
+					<td class="titulo">Elige un Municipio: 
+					</td>
+					<td><select name="municipio">
+						<option value="1">Barcelona</option>
+						<option value="2">Sant Feliu de Llobregat</option>
+						<option value="3">Sant Joan d'Espí</option>
+						<option value="4">El Prat de Llobregat</option>
+						<option value="5">L'Hospitalet de Llobregat</option>
+						<option value="6">Martorell</option>
+						<option value="7">Cornellà de Llobregat</option>
+						<option value="8">Castelldefels</option>
+						<option value="9">Viladecans</option>
+						<option value="10">Begues</option>
+						<option value="11">Castellbisbal</option>
+						<option value="12">Sant Sadurni d'Anoia</option>
+						<option value="13">Rubí</option>
+						<option value="14">Sant Cugar del Vallès</option>
+						<option value="15">Sitges</option>
+						<option value="" selected>Todos</option>
+					</select><br/>
+					</td>
+				</tr>
+				<tr>
+					<td class="titulo">Tipo de animal:					
+					</td>
+					<td>
+						<input type="radio" class="radio" name="opcion" value="1" onClick="animal(this)">Perros
+						<input type="radio" class="radio" name="opcion" value="2" onClick="animal(this)">Gatos
+						<input type="radio" class="radio" name="opcion" value="3" onClick="animal(this)">Pajaros
+						<input type="radio" class="radio" name="opcion" value="4" onClick="animal(this)">Otros
+					</td>
+				</tr>
+				<tr>
+					<td class="titulo"> Raza:
+					</td>
+					<td>
+						<div id="perros" style="display:none;">
+						<select name="perros">
+						  <option value="8">Bòxer</option>
+						  <option value="9">Pastor alemán</option>
+						  <option value="10">Golden Retriever</option>
+						  <option value="11">Husky</option>
+						  <option value="12">Border Collie</option>
+						  <option value="13">Cruzado</option>
+						  <option value="14">Beagle</option>
+						  <option value="27">Otros</option>
+						  <option value="" selected>Todos</option>
+						</select>
+						</div>
+						<div id="gatos" style="display:none;">
+						<select name="gatos">
+						  <option value="15">Persa</option>
+						  <option value="16">Siamés</option>
+						  <option value="17">Común</option>
+						  <option value="18">Abisini</option>
+						  <option value="19">Bobtail</option>
+						  <option value="28">Otros</option>
+						  <option value="" selected>Todos</option>
+						</select>
+						</div>
+						<div id="pajaros" style="display:none;">
+						<select name="pajaros">
+						   <option value="20">Canario</option>
+						   <option value="21">Periquito</option>
+						   <option value="29">Otros</option>
+						   <option value="" selected>Todos</option>
+						</select>
+						</div>
+						<div id="otros" style="display:none;">
+						<select name="otros">
+						  <option value="22">Hurón</option>
+						  <option value="23">Conejo</option>
+						  <option value="24">Hàmster</option>
+						  <option value="25">Tejón</option>
+						  <option value="26">Pato</option>
+						  <option value="30">Otros</option>
+						  <option value="" selected>Todos</option>
+						</select>
+						</div>
+
+					</td>
+				</tr>
+				<tr>
+					<td><input type="reset" value="Cancelar" onClick="reiniciar()">
+					</td>
+					<td><input type="submit" value="Enviar">
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>
+	</body>
+</html>
