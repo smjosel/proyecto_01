@@ -6,31 +6,19 @@
 <!--  -->
     <script language="JavaScript" type="text/javascript">
 
-
-      function animal(tick){
-        var sel=document.getElementsByName(tick.name);
-        document.getElementById('perros').style.display=(sel[0].checked)?'block':'none' ;
-        document.getElementById('gatos').style.display=(sel[1].checked)?'block':'none' ;
-        document.getElementById('pajaros').style.display=(sel[2].checked)?'block':'none' ;
-        document.getElementById('otros').style.display=(sel[3].checked)?'block':'none' ;
+ function animal(tick){
+      var sel=document.getElementsByName(tick.name);
+      document.getElementById('perros').style.display=(sel[0].checked)?'block':'none' ;
+      document.getElementById('gatos').style.display=(sel[1].checked)?'block':'none' ;
+      document.getElementById('pajaros').style.display=(sel[2].checked)?'block':'none' ;
+      document.getElementById('otros').style.display=(sel[3].checked)?'block':'none' ;
       }
-      
-      function myFunction() {
-        
-        //Reinicia el las cajas
-          document.getElementById("municipio").value = "16";
-          document.getElementById("Perros").value = "32";
-          document.getElementById("Gatos").value = "33";
-          document.getElementById("Pajaros").value = "34";
-          document.getElementById("Otros").value = "31";
-
-        //Reiniciar los radioB
-          var ele = document.getElementsByName("opcion");
-          // alert(ele);
-          for(var i=0;i<ele.length;i++) ele[i].checked = false;
-          document.getElementById("formulario").reset();
-        }
-
+    function reiniciar(){
+      document.getElementById('perros').style.display='none';
+      document.getElementById('gatos').style.display='none';
+      document.getElementById('pajaros').style.display='none';
+      document.getElementById('otros').style.display='none';
+    }
       // Funcion para reiniciar los valores de los select
 //       function myFunction() {
 //         // document.getElementsByName("municipio").value = "15";
@@ -79,23 +67,12 @@
       } 
 
 
-//reinicia los radiob
-      function reiniciar(){
-        //document.getElementById("formulario").reset();
-
-        var ele = document.getElementsByName("opcion");
-        // alert(ele);
-        for(var i=0;i<ele.length;i++) ele[i].checked = false;
-        document.getElementById("formulario").reset();
-
-
-        }
 
     </script>
 <!--  -->
 <meta name="description" content="Comprar en la mejor Tienda Online para Reptiles. Envío GRATIS a partir de 39€ para toda ESPAÑA en 48 horas. Ofertas en las mejores marcas y mucho más." />
 <meta name="keywords" content="Animalear" />
-	<meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow" />
 <link rel="icon" href="http://media.animalear.com/media/favicon/default/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="http://media.animalear.com/media/favicon/default/favicon.ico" type="image/x-icon" />
 
@@ -179,9 +156,9 @@ optionalZipCountries = ["IE","PA","HK","MO"];
 </head>
 <body class=" catalog-category-view categorypath-reptiles-html category-reptiles">
 <script type="text/javascript">
-	// Choosen
-	jQuery(document).ready(function () {
-		jQuery('select').each(function () {
+  // Choosen
+  jQuery(document).ready(function () {
+    jQuery('select').each(function () {
             if (typeof jQuery(this).chosen !== 'function') return;
             jQuery(this).chosen({
                 disable_search: true
@@ -190,14 +167,14 @@ optionalZipCountries = ["IE","PA","HK","MO"];
 
 
         // tamaño botones  de raza
-		jQuery('.chzn-container').css('min-width', '150px');
-	});
-	// Messages
-	jQuery(document).ready(function () {
-		jQuery('.messages .close').click(function() {
-			jQuery(this).parent().fadeOut();
-		});
-	});
+    jQuery('.chzn-container').css('min-width', '150px');
+  });
+  // Messages
+  jQuery(document).ready(function () {
+    jQuery('.messages .close').click(function() {
+      jQuery(this).parent().fadeOut();
+    });
+  });
 </script>
 <!-- Google Tag Manager -->
 <script>dataLayer = [{"visitorType":"No Logado","familiaAnimal":"Reptiles","tipoDePagina":"catalog_category"}];</script>
@@ -222,7 +199,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </span>
                     <div class="loginform">
                         <div class="block block-login">
-	<span class="closetab">cerrar</span>
+  <span class="closetab">cerrar</span>
     <div class="block-title">
         <h2>Inicia sesión en Animalear</h2>
     </div>
@@ -231,26 +208,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li>
                 <label for="mini-login">Email:</label>
                 <div class="input-box">
-                	<input type="text" name="login[username]" id="mini-login" class="input-text" />
+                  <input type="text" name="login[username]" id="mini-login" class="input-text" />
                 </div>
             </li>
             <li>
                 <label for="mini-password">Contraseña:</label>
                 <div class="input-box">
-                	<input type="password" name="login[password]" id="mini-password" class="input-text" />
+                  <input type="password" name="login[password]" id="mini-password" class="input-text" />
                 </div>
             </li>
-			
-			<li>	
-				<a href="http://animalear.com/customer/account/forgotpassword/" class="forgot">¿Has olvidado tu contraseña?</a>
-	            <div class="buttons-set">
-		            <button type="submit" title="Iniciar sesión" class="button"><span><span>Iniciar sesión</span></span></button>
-		        </div>
-	            
-	            <span class="full-line"></span>
-	            <div class="signin">¿Todavía no formas parte de Animalear? <a href="http://animalear.com/customer/account/create/">Regístrate ahora</a></div>
-	            <span class="full-line"></span>
-	        </li>
+      
+      <li>  
+        <a href="http://animalear.com/customer/account/forgotpassword/" class="forgot">¿Has olvidado tu contraseña?</a>
+              <div class="buttons-set">
+                <button type="submit" title="Iniciar sesión" class="button"><span><span>Iniciar sesión</span></span></button>
+            </div>
+              
+              <span class="full-line"></span>
+              <div class="signin">¿Todavía no formas parte de Animalear? <a href="http://animalear.com/customer/account/create/">Regístrate ahora</a></div>
+              <span class="full-line"></span>
+          </li>
         </ul>
     </form>
     <div class="fb-seprate"></div>
@@ -258,16 +235,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="fb-login">
             <div class="content">
                 <div id="form-loginfb">
-                	                    	No te encuentras conectado a Facebook.<br/>Haz clic en el siguiente botón para conectarte a Animalear con Facebook.                                    </div>
+                                        No te encuentras conectado a Facebook.<br/>Haz clic en el siguiente botón para conectarte a Animalear con Facebook.                                    </div>
             </div>
         </div>
         <div class="new-users">
             <div class="buttons-set">
-                					<!--<fb:login-button perms="email">Iniciar sesión</fb:login-button>-->
+                          <!--<fb:login-button perms="email">Iniciar sesión</fb:login-button>-->
                     <a class="fb_button fb_button_medium" onclick="login();return false;" href="#">
                         <span class="fb-icon"></span><span class="fb_button_text">Iniciar sesión</span>
                     </a>
-				    
+            
             </div>
         </div>
 </div>
@@ -277,27 +254,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 var newwindow;
 var intId;
 function login(){
-	var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
-	var	 screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
-	var	 outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth;
-	var	 outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22);
-	var	 width    = 500;
-	var	 height   = 270;
-	var	 left     = parseInt(screenX + ((outerWidth - width) / 2), 10);
-	var	 top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10);
-	var	 features = (
-			'width=' + width +
-			',height=' + height +
-			',left=' + left +
-			',top=' + top
-		  );
+  var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
+  var  screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
+  var  outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth;
+  var  outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22);
+  var  width    = 500;
+  var  height   = 270;
+  var  left     = parseInt(screenX + ((outerWidth - width) / 2), 10);
+  var  top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10);
+  var  features = (
+      'width=' + width +
+      ',height=' + height +
+      ',left=' + left +
+      ',top=' + top
+      );
 
-	newwindow=window.open('https://www.facebook.com/dialog/oauth?client_id=498120310297606&redirect_uri=http%3A%2F%2Fanimalear.com%2Ffblogin%2Findex%2Findex%2Fauth%2F1%2F&state=ae59da9e4308d69e5d9de52ca8412cc8&display=popup&scope=email','Login_by_facebook',features);
+  newwindow=window.open('https://www.facebook.com/dialog/oauth?client_id=498120310297606&redirect_uri=http%3A%2F%2Fanimalear.com%2Ffblogin%2Findex%2Findex%2Fauth%2F1%2F&state=ae59da9e4308d69e5d9de52ca8412cc8&display=popup&scope=email','Login_by_facebook',features);
 
-	if (window.focus) {
-		newwindow.focus()
-	}
-	return false;
+  if (window.focus) {
+    newwindow.focus()
+  }
+  return false;
 }
 </script></div>
                     </div>
@@ -325,54 +302,54 @@ function login(){
             </div>
         </div>
     </noscript>
-	<div class="header-wrapper">
-    	<div class="header-container">
+  <div class="header-wrapper">
+      <div class="header-container">
     <div class="header" role="banner">
-        	        		        <a href="http://animalear.com/" title="Animalear.com" class="logo" itemscope itemtype="http://schema.org/Organization"><img src="http://media.animalear.com/skin/frontend/default/animalear/images/logo.jpg" itemprop="name" alt="Animalear.com – La tienda de los animales" /></a>
-	       	                	        <div class="quick-access">
+                              <a href="http://animalear.com/" title="Animalear.com" class="logo" itemscope itemtype="http://schema.org/Organization"><img src="http://media.animalear.com/skin/frontend/default/animalear/images/logo.jpg" itemprop="name" alt="Animalear.com – La tienda de los animales" /></a>
+                                    <div class="quick-access">
                 <span id="free-shipping-header">
                     <span class="free-shipping-header"><span class="truck"></span>Envíos GRATIS a partir de 39€</span>
                 </span>
-	            <div class="cart-container">
-	<div class="block block-cart-button">
-		<div class="block-title">
-	        <span class="cart-icon"></span>
-	        <span class="block-cart-num-products">0 Items</span>
-	        <span>-</span>
-	        <span class="top-price"><span class="price">0,00€</span></span>
-	    </div>
-	</div>
-	<script type="text/javascript">
-		jQuery(document).ready(function () {
-			jQuery(".block-cart-button").click(function() {
-				jQuery(".block-cart").fadeIn();
-			});
-		});
-	</script>
-		<div class="block block-cart">
-	    	    <div class="block-title">
-	        <span class="cart-icon"></span>
-	        <span class="button-close">close</span>
-	    </div>
-	    <div class="block-content">
-	    	    	        <p class="empty">No tienes artículos en tu cesta de la compra.</p>
-	    	    
-	    	            	<span class="free-shipping-small"><span>Sólo te falta <span class="price">39,00€</span> para tener envío gratis</span></span>
-				<div class="full-line"></div>
-	    	    	    </div>
-	</div>
-	<script type="text/javascript">
-		jQuery(document).ready(function () {
-			jQuery(".block-cart .button-close").click(function() {
-				jQuery(".block-cart").fadeOut();
-			});
-		});
+              <div class="cart-container">
+  <div class="block block-cart-button">
+    <div class="block-title">
+          <span class="cart-icon"></span>
+          <span class="block-cart-num-products">0 Items</span>
+          <span>-</span>
+          <span class="top-price"><span class="price">0,00€</span></span>
+      </div>
+  </div>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery(".block-cart-button").click(function() {
+        jQuery(".block-cart").fadeIn();
+      });
+    });
+  </script>
+    <div class="block block-cart">
+            <div class="block-title">
+          <span class="cart-icon"></span>
+          <span class="button-close">close</span>
+      </div>
+      <div class="block-content">
+                      <p class="empty">No tienes artículos en tu cesta de la compra.</p>
+            
+                      <span class="free-shipping-small"><span>Sólo te falta <span class="price">39,00€</span> para tener envío gratis</span></span>
+        <div class="full-line"></div>
+                  </div>
+  </div>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery(".block-cart .button-close").click(function() {
+        jQuery(".block-cart").fadeOut();
+      });
+    });
 
-		minicartProductRemove = function(button, url) {
-			url = url + 'isAjax/1/';
-			jQuery(button).hide();
-			jQuery(button).next().show();
-			try {
+    minicartProductRemove = function(button, url) {
+      url = url + 'isAjax/1/';
+      jQuery(button).hide();
+      jQuery(button).next().show();
+      try {
                 jQuery.ajax({
                     url: url,
                     dataType: 'json',
@@ -380,19 +357,19 @@ function login(){
                     success: function(data)
                     {
                         if (data.sidebar && jQuery('.quick-access .cart-container')){
-                        	jQuery('.quick-access .cart-container').remove();
+                          jQuery('.quick-access .cart-container').remove();
                             jQuery('.quick-access').prepend(data.sidebar);
                             jQuery('.block-cart').show();
                         } else {
                             alert(data.message);
                         }
                     }
-				});
+        });
             } catch (e) {
             }
-		}
-	</script>
-	</div>	            <form id="search_mini_form" action="http://animalear.com/catalogsearch/result/" method="get">
+    }
+  </script>
+  </div>              <form id="search_mini_form" action="http://animalear.com/catalogsearch/result/" method="get">
     <div class="form-search">
         <input id="search" type="text" name="q" value="" class="input-text" maxlength="128" />
         <div id="search_autocomplete" class="search-autocomplete" style="z-index:9999; background-color:#FFF;"></div>
@@ -404,10 +381,10 @@ function login(){
         </script>
     </div>
 </form>
-	        </div>
-	        	        </div>
+          </div>
+                    </div>
 </div>
-	<div class="btn-responsive-menu">
+  <div class="btn-responsive-menu">
     <div class="responsive-menu-lines"><span></span><span></span><span></span></div>
     <label>Menu</label>
     <script type="text/javascript">
@@ -426,7 +403,7 @@ function login(){
 
 <div class="nav-container">
     <ul id="navigator" class="nav" role="navigation">
-						        			                                                                                                                                                                                    <li class="parent first">
+                                                                                                                                                                                                              <li class="parent first">
                     <a href="http://animalear.com/perros.html">
                         <span>Perros</span>
                         <span class="icon"></span>
@@ -459,14 +436,14 @@ function login(){
                                             <a href="http://animalear.com/perros/casetas-para-perros.html" title="Casetas para perros">
                                                 Casetas para perros                                            </a>
                                         </li>
-                                        		                	</ul>
-			                <a href="http://animalear.com/perros.html">
-			                    <span>Todas las categorías para <span class="name">Perros</span> &gt;</span>
-			                </a>
-	                	</div>
-	                		                	<div class="top-brands">
-	                		<h4 class="title">Top marcas <span class="name">Perros</span></h4>
-	                		<ul class="brands">
+                                                              </ul>
+                      <a href="http://animalear.com/perros.html">
+                          <span>Todas las categorías para <span class="name">Perros</span> &gt;</span>
+                      </a>
+                    </div>
+                                        <div class="top-brands">
+                      <h4 class="title">Top marcas <span class="name">Perros</span></h4>
+                      <ul class="brands">
                                                                                                         <li class="">
                     <a href="http://animalear.com/pienso-royal-canin.html" title="Royal Canin">
                     Royal Canin                    </a>
@@ -491,33 +468,33 @@ function login(){
                     <a href="http://animalear.com/pienso-orijen.html" title="Orijen">
                     Orijen                    </a>
             </li>
-                                	                		</ul>
-	                	</div>
-	                		                		                							<div class="featured">
-			<h4 class="title">También destacamos</h4>
-			<a href="http://animalear.com/seresto-collar-antiparasitario-hasta-8kg.html" title="" class="product-image">
-				<div class="featured-item">
-					<div class="overflowh">
-						<div class="image">
-							<img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/s/e/seresto-collar-antiparasitario-perros-hasta-8kg.jpg" width="138" height="138" alt="" />
-				        </div>
-				        <div class="information">
-					    	<div class="title">Seresto Collar antiparasitario (hasta 8Kg)</div>
-					    	<div class="brand">
+                                                      </ul>
+                    </div>
+                                                                        <div class="featured">
+      <h4 class="title">También destacamos</h4>
+      <a href="http://animalear.com/seresto-collar-antiparasitario-hasta-8kg.html" title="" class="product-image">
+        <div class="featured-item">
+          <div class="overflowh">
+            <div class="image">
+              <img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/s/e/seresto-collar-antiparasitario-perros-hasta-8kg.jpg" width="138" height="138" alt="" />
+                </div>
+                <div class="information">
+                <div class="title">Seresto Collar antiparasitario (hasta 8Kg)</div>
+                <div class="brand">
                                                                                                     <h4 class="product-brand">Bayer</h4>
                                                             </div>
                             <div class="price">
                                                                                                                                     <span class="special-price">34,54€</span>
                                                                 <span class="old-price">23,40€</span>
                             </div>
-					    </div>
-					</div>
-				</div>
-			</a>
-	    </div>
-		                </div>
-	            </li>
-	                                                                                                                                                                                    <li class="parent">
+              </div>
+          </div>
+        </div>
+      </a>
+      </div>
+                    </div>
+              </li>
+                                                                                                                                                                                      <li class="parent">
                     <a href="http://animalear.com/gatos.html">
                         <span>Gatos</span>
                         <span class="icon"></span>
@@ -550,14 +527,14 @@ function login(){
                                             <a href="http://animalear.com/gatos/arena-para-gatos.html" title="Arena para gatos">
                                                 Arena para gatos                                            </a>
                                         </li>
-                                        		                	</ul>
-			                <a href="http://animalear.com/gatos.html">
-			                    <span>Todas las categorías para <span class="name">Gatos</span> &gt;</span>
-			                </a>
-	                	</div>
-	                		                	<div class="top-brands">
-	                		<h4 class="title">Top marcas <span class="name">Gatos</span></h4>
-	                		<ul class="brands">
+                                                              </ul>
+                      <a href="http://animalear.com/gatos.html">
+                          <span>Todas las categorías para <span class="name">Gatos</span> &gt;</span>
+                      </a>
+                    </div>
+                                        <div class="top-brands">
+                      <h4 class="title">Top marcas <span class="name">Gatos</span></h4>
+                      <ul class="brands">
                                                                                                         <li class="">
                     <a href="http://animalear.com/royal-canin-gatos.html" title="Royal Canin">
                     Royal Canin                    </a>
@@ -582,33 +559,33 @@ function login(){
                     <a href="http://animalear.com/orijen-gatos.html" title="Orijen">
                     Orijen                    </a>
             </li>
-                                	                		</ul>
-	                	</div>
-	                		                		                							<div class="featured">
-			<h4 class="title">También destacamos</h4>
-			<a href="http://animalear.com/alfombra-step-and-go.html" title="" class="product-image">
-				<div class="featured-item">
-					<div class="overflowh">
-						<div class="image">
-							<img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/a/l/alfombra-step-and-go-fm.jpg" width="138" height="138" alt="" />
-				        </div>
-				        <div class="information">
-					    	<div class="title">Alfombra Step and Go</div>
-					    	<div class="brand">
+                                                      </ul>
+                    </div>
+                                                                        <div class="featured">
+      <h4 class="title">También destacamos</h4>
+      <a href="http://animalear.com/alfombra-step-and-go.html" title="" class="product-image">
+        <div class="featured-item">
+          <div class="overflowh">
+            <div class="image">
+              <img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/a/l/alfombra-step-and-go-fm.jpg" width="138" height="138" alt="" />
+                </div>
+                <div class="information">
+                <div class="title">Alfombra Step and Go</div>
+                <div class="brand">
                                                                                                     <h4 class="product-brand">Flamingo</h4>
                                                             </div>
                             <div class="price">
                                                                                                                                     <span class="special-price">17,19€</span>
                                                                 <span class="old-price">9,50€</span>
                             </div>
-					    </div>
-					</div>
-				</div>
-			</a>
-	    </div>
-		                </div>
-	            </li>
-	                                                                                                                                                                                    <li class="parent">
+              </div>
+          </div>
+        </div>
+      </a>
+      </div>
+                    </div>
+              </li>
+                                                                                                                                                                                      <li class="parent">
                     <a href="http://animalear.com/roedores.html">
                         <span>Roedores</span>
                         <span class="icon"></span>
@@ -641,14 +618,14 @@ function login(){
                                             <a href="http://animalear.com/roedores/comida-para-roedores.html" title="Comida para roedores">
                                                 Comida para roedores                                            </a>
                                         </li>
-                                        		                	</ul>
-			                <a href="http://animalear.com/roedores.html">
-			                    <span>Todas las categorías para <span class="name">Roedores</span> &gt;</span>
-			                </a>
-	                	</div>
-	                		                	<div class="top-brands">
-	                		<h4 class="title">Top marcas <span class="name">Roedores</span></h4>
-	                		<ul class="brands">
+                                                              </ul>
+                      <a href="http://animalear.com/roedores.html">
+                          <span>Todas las categorías para <span class="name">Roedores</span> &gt;</span>
+                      </a>
+                    </div>
+                                        <div class="top-brands">
+                      <h4 class="title">Top marcas <span class="name">Roedores</span></h4>
+                      <ul class="brands">
                                                                                                         <li class="">
                     <a href="http://animalear.com/cunipic.html" title="Cunipic">
                     Cunipic                    </a>
@@ -673,33 +650,33 @@ function login(){
                     <a href="http://animalear.com/axis-biozoo.html" title="Axis-Biozoo">
                     Axis-Biozoo                    </a>
             </li>
-                                	                		</ul>
-	                	</div>
-	                		                		                							<div class="featured">
-			<h4 class="title">También destacamos</h4>
-			<a href="http://animalear.com/iglu-para-hamsters-voltrega.html" title="" class="product-image">
-				<div class="featured-item">
-					<div class="overflowh">
-						<div class="image">
-							<img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/i/g/iglu-para-hamsters-voltrega.jpg" width="138" height="138" alt="" />
-				        </div>
-				        <div class="information">
-					    	<div class="title">Iglú para hámsters Voltrega</div>
-					    	<div class="brand">
+                                                      </ul>
+                    </div>
+                                                                        <div class="featured">
+      <h4 class="title">También destacamos</h4>
+      <a href="http://animalear.com/iglu-para-hamsters-voltrega.html" title="" class="product-image">
+        <div class="featured-item">
+          <div class="overflowh">
+            <div class="image">
+              <img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/i/g/iglu-para-hamsters-voltrega.jpg" width="138" height="138" alt="" />
+                </div>
+                <div class="information">
+                <div class="title">Iglú para hámsters Voltrega</div>
+                <div class="brand">
                                                                                                     <h4 class="product-brand">Voltrega</h4>
                                                             </div>
                             <div class="price">
                                                                                                                                     <span class="special-price">2,11€</span>
                                                                 <span class="old-price">1,85€</span>
                             </div>
-					    </div>
-					</div>
-				</div>
-			</a>
-	    </div>
-		                </div>
-	            </li>
-	                                                                                                                                                                                    <li class="parent">
+              </div>
+          </div>
+        </div>
+      </a>
+      </div>
+                    </div>
+              </li>
+                                                                                                                                                                                      <li class="parent">
                     <a href="http://animalear.com/peces.html">
                         <span>Peces</span>
                         <span class="icon"></span>
@@ -732,14 +709,14 @@ function login(){
                                             <a href="http://animalear.com/peces/comida-para-peces-de-agua-fria.html" title="Comida para peces de agua fria">
                                                 Comida para peces de agua fria                                            </a>
                                         </li>
-                                        		                	</ul>
-			                <a href="http://animalear.com/peces.html">
-			                    <span>Todas las categorías para <span class="name">Peces</span> &gt;</span>
-			                </a>
-	                	</div>
-	                		                	<div class="top-brands">
-	                		<h4 class="title">Top marcas <span class="name">Peces</span></h4>
-	                		<ul class="brands">
+                                                              </ul>
+                      <a href="http://animalear.com/peces.html">
+                          <span>Todas las categorías para <span class="name">Peces</span> &gt;</span>
+                      </a>
+                    </div>
+                                        <div class="top-brands">
+                      <h4 class="title">Top marcas <span class="name">Peces</span></h4>
+                      <ul class="brands">
                                                                                                         <li class="">
                     <a href="http://animalear.com/tetra.html" title="Tetra">
                     Tetra                    </a>
@@ -764,33 +741,33 @@ function login(){
                     <a href="http://animalear.com/rena.html" title="Rena">
                     Rena                    </a>
             </li>
-                                	                		</ul>
-	                	</div>
-	                		                		                							<div class="featured">
-			<h4 class="title">También destacamos</h4>
-			<a href="http://animalear.com/tetra-safestar-limpiador-agua.html" title="" class="product-image">
-				<div class="featured-item">
-					<div class="overflowh">
-						<div class="image">
-							<img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/t/e/tetra-safestar-limpiador-agua.jpg" width="138" height="138" alt="" />
-				        </div>
-				        <div class="information">
-					    	<div class="title">Tetra SafeStar (limpiador agua)</div>
-					    	<div class="brand">
+                                                      </ul>
+                    </div>
+                                                                        <div class="featured">
+      <h4 class="title">También destacamos</h4>
+      <a href="http://animalear.com/tetra-safestar-limpiador-agua.html" title="" class="product-image">
+        <div class="featured-item">
+          <div class="overflowh">
+            <div class="image">
+              <img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/t/e/tetra-safestar-limpiador-agua.jpg" width="138" height="138" alt="" />
+                </div>
+                <div class="information">
+                <div class="title">Tetra SafeStar (limpiador agua)</div>
+                <div class="brand">
                                                                                                     <h4 class="product-brand">Tetra</h4>
                                                             </div>
                             <div class="price">
                                                                                                                                     <span class="special-price">11,45€</span>
                                                                 <span class="old-price">7,80€</span>
                             </div>
-					    </div>
-					</div>
-				</div>
-			</a>
-	    </div>
-		                </div>
-	            </li>
-	                                                                                                                                                                                    <li class="parent">
+              </div>
+          </div>
+        </div>
+      </a>
+      </div>
+                    </div>
+              </li>
+                                                                                                                                                                                      <li class="parent">
                     <a href="http://animalear.com/pajaros.html">
                         <span>Pájaros</span>
                         <span class="icon"></span>
@@ -823,14 +800,14 @@ function login(){
                                             <a href="http://animalear.com/pajaros/barritas-y-snacks.html" title="Barritas y snacks">
                                                 Barritas y snacks                                            </a>
                                         </li>
-                                        		                	</ul>
-			                <a href="http://animalear.com/pajaros.html">
-			                    <span>Todas las categorías para <span class="name">Pájaros</span> &gt;</span>
-			                </a>
-	                	</div>
-	                		                	<div class="top-brands">
-	                		<h4 class="title">Top marcas <span class="name">Pájaros</span></h4>
-	                		<ul class="brands">
+                                                              </ul>
+                      <a href="http://animalear.com/pajaros.html">
+                          <span>Todas las categorías para <span class="name">Pájaros</span> &gt;</span>
+                      </a>
+                    </div>
+                                        <div class="top-brands">
+                      <h4 class="title">Top marcas <span class="name">Pájaros</span></h4>
+                      <ul class="brands">
                                                                                                         <li class="">
                     <a href="http://animalear.com/voltrega.html" title="Voltrega">
                     Voltrega                    </a>
@@ -855,33 +832,33 @@ function login(){
                     <span>
                     Sanibird                    </span>
             </li>
-                                	                		</ul>
-	                	</div>
-	                		                		                							<div class="featured">
-			<h4 class="title">También destacamos</h4>
-			<a href="http://animalear.com/ba-era-interior-plastico-para-aves-peque-as.html" title="" class="product-image">
-				<div class="featured-item">
-					<div class="overflowh">
-						<div class="image">
-							<img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/b/a/banera-interior-para-aves-pequenas.jpg" width="138" height="138" alt="" />
-				        </div>
-				        <div class="information">
-					    	<div class="title">Bañera interior para aves pequeñas</div>
-					    	<div class="brand">
+                                                      </ul>
+                    </div>
+                                                                        <div class="featured">
+      <h4 class="title">También destacamos</h4>
+      <a href="http://animalear.com/ba-era-interior-plastico-para-aves-peque-as.html" title="" class="product-image">
+        <div class="featured-item">
+          <div class="overflowh">
+            <div class="image">
+              <img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/b/a/banera-interior-para-aves-pequenas.jpg" width="138" height="138" alt="" />
+                </div>
+                <div class="information">
+                <div class="title">Bañera interior para aves pequeñas</div>
+                <div class="brand">
                                                                                                     <h4 class="product-brand">Nayeco</h4>
                                                             </div>
                             <div class="price">
                                                                                                                                     <span class="special-price">0,67€</span>
                                                                 <span class="old-price">0,61€</span>
                             </div>
-					    </div>
-					</div>
-				</div>
-			</a>
-	    </div>
-		                </div>
-	            </li>
-	           <li class="parent">
+              </div>
+          </div>
+        </div>
+      </a>
+      </div>
+                    </div>
+              </li>
+             <li class="parent">
                     <a href="http://animalear.com/reptiles.html">
                         <span>Reptiles</span>
                         <span class="icon"></span>
@@ -913,14 +890,14 @@ function login(){
                                             <a href="http://animalear.com/reptiles/higiene-y-salud.html" title="Higiene y salud">
                                                 Higiene y salud                                            </a>
                                         </li>
-                                        		                	</ul>
-			                <a href="http://animalear.com/reptiles.html">
-			                    <span>Todas las categorías para <span class="name">Reptiles</span> &gt;</span>
-			                </a>
-	                	</div>
-	                		                	<div class="top-brands">
-	                		<h4 class="title">Top marcas <span class="name">Reptiles</span></h4>
-	                		<ul class="brands">
+                                                              </ul>
+                      <a href="http://animalear.com/reptiles.html">
+                          <span>Todas las categorías para <span class="name">Reptiles</span> &gt;</span>
+                      </a>
+                    </div>
+                                        <div class="top-brands">
+                      <h4 class="title">Top marcas <span class="name">Reptiles</span></h4>
+                      <ul class="brands">
                                                                                                         <li class="">
                     <a href="http://animalear.com/tetra.html" title="Tetra">
                     Tetra                    </a>
@@ -945,31 +922,31 @@ function login(){
                     <span>
                     Rena                    </span>
             </li>
-                                	                		</ul>
-	                	</div>
-	                		                		                							<div class="featured">
-			<h4 class="title">También destacamos</h4>
-			<a href="http://animalear.com/terrario-para-tortugas-turtle-bay.html" title="" class="product-image">
-				<div class="featured-item">
-					<div class="overflowh">
-						<div class="image">
-							<img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/t/e/terrario-para-tortugas-turtle-bay.jpg" width="138" height="138" alt="" />
-				        </div>
-				        <div class="information">
-					    	<div class="title">Terrario para tortugas Turtle Bay</div>
-					    	<div class="brand">
+                                                      </ul>
+                    </div>
+                                                                        <div class="featured">
+      <h4 class="title">También destacamos</h4>
+      <a href="http://animalear.com/terrario-para-tortugas-turtle-bay.html" title="" class="product-image">
+        <div class="featured-item">
+          <div class="overflowh">
+            <div class="image">
+              <img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/138x/9df78eab33525d08d6e5fb8d27136e95/t/e/terrario-para-tortugas-turtle-bay.jpg" width="138" height="138" alt="" />
+                </div>
+                <div class="information">
+                <div class="title">Terrario para tortugas Turtle Bay</div>
+                <div class="brand">
                                                                                                     <h4 class="product-brand">Flamingo</h4>
                                                             </div>
                             <div class="price">
                                                                                                                                     <span class="special-price">40,31€</span>
                                                                 <span class="old-price">38,25€</span>
                             </div>
-					    </div>
-					</div>
-				</div>
-			</a>
-	    </div>
-		                </div>
+              </div>
+          </div>
+        </div>
+      </a>
+      </div>
+                    </div>
 
 <!-- Principo de adoptar mascotas -->
 <li class="parent active">
@@ -984,32 +961,32 @@ function login(){
 
 
 
-	            </li>
-	        			    <li class="parent your-pets">
-	<a href="http://animalear.com/animalear/">
-		<span class="pet-icon"></span><span>Mis mascotas</span><span class="icon"></span>
-	</a>
-	<div class="menu-layer">
-														<img src="http://media.animalear.com/skin/frontend/default/animalear/images/all_animals.png" alt="Me encanta Animalear" title="Me encanta Animalear" class="all-animals" />
-			<span class="title">¿Todavía no has configurado tu mascota?</span>
-			<span class="subtitle">Configura tu mascota ahora y TE REGALAMOS un 5% de DESCUENTO en tu próxima compra</span>
-			<div class="buttons-set">
-	            <button type="submit" onclick="location.href='http://animalear.com/animalear/account/create/';"	title="Dinos cómo es tu mascota" class="button"><span><span>Dinos como es tu mascota</span></span></button>
-	        </div>
-			
-	</div>
+              </li>
+                    <li class="parent your-pets">
+  <a href="http://animalear.com/animalear/">
+    <span class="pet-icon"></span><span>Mis mascotas</span><span class="icon"></span>
+  </a>
+  <div class="menu-layer">
+                            <img src="http://media.animalear.com/skin/frontend/default/animalear/images/all_animals.png" alt="Me encanta Animalear" title="Me encanta Animalear" class="all-animals" />
+      <span class="title">¿Todavía no has configurado tu mascota?</span>
+      <span class="subtitle">Configura tu mascota ahora y TE REGALAMOS un 5% de DESCUENTO en tu próxima compra</span>
+      <div class="buttons-set">
+              <button type="submit" onclick="location.href='http://animalear.com/animalear/account/create/';" title="Dinos cómo es tu mascota" class="button"><span><span>Dinos como es tu mascota</span></span></button>
+          </div>
+      
+  </div>
 </li>
     </ul>
 </div>
 <script type="text/javascript">
-	// To do a function for this seems to be necessary
-	function delayHover (element) {
-    	timer = setTimeout ( function () {
-        	if (jQuery(element).is(':hover')) {
-            	jQuery(element).addClass("activex");
-			}
-		}, 300);
-	};
+  // To do a function for this seems to be necessary
+  function delayHover (element) {
+      timer = setTimeout ( function () {
+          if (jQuery(element).is(':hover')) {
+              jQuery(element).addClass("activex");
+      }
+    }, 300);
+  };
 
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         jQuery("#navigator li.parent a").click(function () {
@@ -1051,33 +1028,37 @@ function login(){
         </script>
         </div>
     <div class="page-wrapper">
-	                	    <div class="page">
-	        <div class="main-container col2-left-layout">
-	            <div class="main" role="main">
-	                <div class="nav" role="navigation">
+                        <div class="page">
+          <div class="main-container col2-left-layout">
+              <div class="main" role="main">
+                  <div class="nav" role="navigation">
 <div class="breadcrumbs">
     <ul>
-                	            <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a href="http://animalear.com/" title="Ir a la p&aacute;gina inicial" itemprop="url"><span itemprop="title">Inicio</span></a>
-                                        <span>&gt; </span>
-                        </li>
-                              <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a href="index.html" title="Ir a la p&aacute;gina Mascotas Perdidas" itemprop="url"><span itemprop="title">Mascotas_Perdidas</span></a>
-                                        <span>&gt; </span>
-                              </li>
-                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a href="Anuncios.php" title="Ir a la p&aacute;gina Anuncios Mascotas Perdidas" itemprop="url"><span itemprop="title">Anuncios</span></a>
-                                        <span>&gt; </span>
-                              </li>
+          <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="http://animalear.com/" title="Ir a la p&aacute;gina inicial" itemprop="url"><span itemprop="title">Inicio</span></a>
+            <span>&gt; </span>
+          </li>
+           <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="index.html" title="Ir a la p&aacute;gina Mascotas Perdidas" itemprop="url"><span itemprop="title">Mascotas_Perdidas</span></a>
+            <span>&gt; </span>
+          </li>
+           <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="form_anu.html" title="Ir a la p&aacute;gina Introducir anuncios" itemprop="url"><span itemprop="title">Introducir_anuncios</span></a>
+            <span>&gt; </span>
+          </li>
+
+
+
+
             </ul>
 </div>
 </div>
-	                <h1 class="extra-red">Mascotas Perdidas</h1>
-<span class="full-line"></span>	                	                
+                  <h1 class="extra-red">Mascotas Perdidas</h1>
+<span class="full-line"></span>                                   
 
 <!-- Principio cuerpo -->
 <div class="col-main">
-	<div style="display:none" class="amshopby-filters-top">
+  <div style="display:none" class="amshopby-filters-top">
         <div style="display:none" class="amshopby-overlay">
         </div>
     </div>
@@ -1090,86 +1071,153 @@ function login(){
 
     <div class="page-title category-title">
     </div>
-
-    <a href="form_anu.html">
+    <a href="animalear_bd.php">
   <img id="banner-category" src="img\cate-revento.jpg" alt="anuncio"/>
     </a>
 <!-- Titulo -->
-        		<h2>Anuncios</h2>
+            <h2>Introduce tu anuncio</h2>
 
-<div >
+<div class="categories">
+ <div id="formularioanu">
+    <p class="titulo2" align="center">Animales perdidos</p>
+    <br/>
+   <form name="insertar" action="insert_anu.php" method="post"> 
+        <table>
+          <tr>
+            <td class="titulo">Título del anuncio:          
+            </td>
+            <td>
+              <input type="text" name="titul">
+            </td>
+          </tr>
+          <tr>
+            <td class="titulo">Elige un Municipio: 
+            </td>
+            <td><select name="municipio">
+              <option value="1">Barcelona</option>
+              <option value="2">Sant Feliu de Llobregat</option>
+              <option value="3">Sant Joan d'Espí</option>
+              <option value="4">El Prat de Llobregat</option>
+              <option value="5">L'Hospitalet de Llobregat</option>
+              <option value="6">Martorell</option>
+              <option value="7">Cornellà de Llobregat</option>
+              <option value="8">Castelldefels</option>
+              <option value="9">Viladecans</option>
+              <option value="10">Begues</option>
+              <option value="11">Castellbisbal</option>
+              <option value="12">Sant Sadurni d'Anoia</option>
+              <option value="13">Rubí</option>
+              <option value="14">Sant Cugar del Vallès</option>
+              <option value="15">Sitges</option>
+            </select><br/><br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="titulo">Tipo de animal:          
+            </td>
+            <td>
+              <input type="radio" class="radio" name="opcion" value="1" onClick="animal(this)">Perros
+              <input type="radio" class="radio" name="opcion" value="2" onClick="animal(this)">Gatos
+              <input type="radio" class="radio" name="opcion" value="3" onClick="animal(this)">Pajaros
+              <input type="radio" class="radio" name="opcion" value="4" onClick="animal(this)">Otros
+            </td><br/><br/>
+          </tr>
+          <tr>
+            <td class="titulo">Raza:</td> 
+            <td>
+              <div id="perros" style="display:none;">
+              <select name="perros">
+                <option value="8">Bòxer</option>
+                <option value="9">Pastor alemán</option>
+                <option value="10">Golden Retriever</option>
+                <option value="11">Husky</option>
+                <option value="12">Border Collie</option>
+                <option value="13">Cruzado</option>
+                <option value="14">Beagle</option>
+                <option value="27">Otros</option>
+                <option value="" selected>--Seleccion--</option>
+              </select>
+              </div>
+              <div id="gatos" style="display:none;">
+              <select name="gatos">
+                <option value="15">Persa</option>
+                <option value="16">Siamés</option>
+                <option value="17">Común</option>
+                <option value="18">Abisini</option>
+                <option value="19">Bobtail</option>
+                <option value="28">Otros</option>
+                <option value="" selected>--Seleccion--</option>
+              </select>
+              </div>
+              <div id="pajaros" style="display:none;">
+              <select name="pajaros">
+                 <option value="20">Canario</option>
+                 <option value="21">Periquito</option>
+                 <option value="29">Otros</option>
+                 <option value="" selected>--Seleccion--</option>
+              </select>
+              </div>
+              <div id="otros" style="display:none;">
+              <select name="otros">
+                <option value="22">Hurón</option>
+                <option value="23">Conejo</option>
+                <option value="24">Hàmster</option>
+                <option value="25">Tejón</option>
+                <option value="26">Pato</option>
+                <option value="30">Otros</option>
+                <option value="" selected>--Seleccion--</option>
+              </select>
+              </div>
+              
+            </td>
+          </tr>
+          <tr>
+            <td class="titulo">Contacto:</td>
+            <td><select name="contacto">
+              <option value="1">Carles Martín</option>
+              <option value="2">Antonio Gámez</option>
+              <option value="3">Carlos Martínez</option>
+              <option value="4">Isabel Vázquez</option>
+              <option value="5">Pedro Santiesteban</option>
+              <option value="6">Sònia Gómez</option>
+              <option value="7">Patricia Martín</option>
+              <option value="8">Albert Pérez</option>
+              <option value="9">Carlos Rodriguez</option>
+              <option value="10">Sara García</option>
+              <option value="11">Claudia Padilla</option>
+          </tr>
+          <tr>
+            <td class="titulo">Tipo de anuncio:</td>
+            <td><select name="anu_tip">
+              <option value="Perdut">Perdido</option>
+              <option value="trobat">Encontrado</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td class="titulo">Fecha: </td>
+            <td><input type="date" name="fecha" step="1" min="2015-01-01" max="2020-12-31" value="date()">
+          </tr>
+          <tr>
+            <td class="titulo">Anuncio:</td>
+            <td><textarea name="rollo" cols="25" rows="7" placeholder="Escribe aqui..."></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+            <input type="submit" value="Enviar" class="button blue radius">
+            </td>
+          </tr>
+          <div>
+
+          </div>
+        </table>
+      </form>
+    </div>
 
 
-<div id="anun" style="display:block";>
-<?php
-      //realizamos la conexión con mysql
-      $con = mysqli_connect('localhost', 'root', '', 'bd_botiga_animals');
 
-      //como la sentencia SIEMPRE va a buscar todos los registros de la tabla tbl_anunci, pongo en la variable $sql.
-      $sql = "SELECT * FROM tbl_anunci,tbl_contacte WHERE tbl_anunci.contact_id=tbl_contacte.contact_id";
-      
-        if(!empty($_REQUEST['municipio'])){
-          $sql.=" AND tbl_anunci.mun_id=$_REQUEST[municipio]"; //Añadimos la busqueda del municipio
 
-        } else {
-          // no añadimos municipio a la busqueda para que busque todos
-        }
-        if(empty($_REQUEST['perros']) && empty($_REQUEST['gatos']) && empty($_REQUEST['pajaros']) && empty($_REQUEST['otros'])){
-          if(!empty($_REQUEST['opcion'])){
-            if($_REQUEST['opcion']==1){
-              $sql.=" AND raca_id BETWEEN 8 AND 14";
-            } else if ($_REQUEST['opcion']==2){
-              $sql.=" AND raca_id BETWEEN 15 AND 19";
-            } else if ($_REQUEST['opcion']==3){
-              $sql.=" AND raca_id BETWEEN 20 AND 21";
-            } else {
-              $sql.=" AND raca_id BETWEEN 22 AND 26";
-            }
-          } else {
-            // no añadimos animal a la busqueda para que busque todos
-          }
-        } else if (!empty($_REQUEST['perros'])){
-          $sql.=" AND raca_id=$_REQUEST[perros]";
-        } else if (!empty($_REQUEST['gatos'])){
-          $sql.=" AND raca_id=$_REQUEST[gatos]";
-        } else if (!empty($_REQUEST['pajaros'])){
-          $sql.=" AND raca_id=$_REQUEST[pajaros]";
-        } else {
-          $sql.=" AND raca_id=$_REQUEST[otros]";
-        }
-      //lanzamos la sentencia sql
-      $datos = mysqli_query($con, $sql);
-      
-      if(mysqli_num_rows($datos)>0){ // vemos si hay resultados o no en la busqueda realizada, si hay realizamos el muestreo de los datos
-        
-        while($anuncio = mysqli_fetch_array($datos)){
-          echo "<b>Anuncio:</b> $anuncio[anu_contingut]<br/>";
-          echo "<b>Fecha anuncio:</b> $anuncio[anu_data]<br/>";
-          echo "<b>Estado:</b> $anuncio[anu_tipus]<br/>";
-          echo "<b>Nombre de contacto:</b> $anuncio[contact_nom]<br/>";
-          echo "<b>Teléfono de contacto:</b> $anuncio[contact_telf]<br/>";
-          if(!empty($anuncio['anu_foto'])){
-            $fichero="img/$anuncio[anu_foto]";
-            if(file_exists($fichero)){
-              //en el caso que la imagen exista, la muestra por pantalla
-              echo "<img src='$fichero' width='250'><br/><br/>";
-            } else {
-              echo "<img src='img/no_disponible.jpg' width='250'><br/><br/>"; //mostramos una imagen de 'imagen no disponible' en el caso que no exista el fichero en la ubicación
-            }
-          } else {
-              //si la imagen del producto no existe, cargaremos una imagen de 'imagen no disponible'
-              echo "<img src='img/no_disponible.jpg' width='250'><br/><br/>";
-          }
-        }
-      } else { // si no hay datos en la busqueda mostramos por pantalla que no hay resultados en la busqueda realizada
-        echo "<b>No hay resultados</b> <br/><br/>";
-      }
-      //cerramos la conexión con la base de datos
-      mysqli_close($con);
-    ?>
 
-<button type="button" class="button yellow radius" onclick="location.href='index.html'")>volver</button>
-</div>
 
 
 
@@ -1211,56 +1259,56 @@ Nuestra utopía, por tanto, es el llegar a unir a todos los amantes de los anima
         </script>
     </div>
 
-	<div class="featured-brands">
-		<h2>Últimos animales encontrados</h2>
-		<div class="featured-brands-wrapper">
-			<ul id="list-featured-brands">                                                                	
+  <div class="featured-brands">
+    <h2>Últimos animales encontrados</h2>
+    <div class="featured-brands-wrapper">
+      <ul id="list-featured-brands">                                                                  
                 <li class="item">
                     <img src="img\animales\animal1.jpg" width="140" alt="Imagen animal 1" />
                 </li>
-                                            	                                	                                                                                                                                                                                                                                                                                                                                <li class="item">
+                                                                                                                                                                                                                                                                                                                                                                                                                <li class="item">
                                 <img src="img\animales\animal2.jpg" width="140" alt="Imagen animal2" />
                                                           </li>
-                                            	                                	                                                                                                                                                                                                                                                                                                                                <li class="item">
+                                                                                                                                                                                                                                                                                                                                                                                                                <li class="item">
                                 <img src="img\animales\animal3.jpg" width="140" alt="Imagen animal3" />
                                 </a>                            </li>
-                                            	                                	                                	                                                                                                                                                                                                                                                                                                                                <li class="item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  <li class="item">
                                                                     <img src="img\animales\animal4.jpg" width="140" alt="Imagen animal 4" />
                                                             </li>
-                                            	                                	                                	                                	                                	                                	                                                                                                                                                                                                                                                                                                                                <li class="item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="item">
                                                                     <img src="img\animales\animal5.jpg" width="140" alt="Imagen animal 5" />
                                                             </li>
-                                            	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                                                                                                                                                                                                                                            <li class="item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <li class="item">
                                 <img src="img\animales\animal6.jpg" width="140" alt="Imagen animal 6" />
                                 </a>                            </li>
-                                            	                                	                                	                                	                                	                                	                                                                                                                                                                                                                                                                                                                                <li class="item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="item">
                                                                     <img src="img\animales\animal7.jpg" width="140" alt="Imagen animal 7" />
                                                             </li>
-                                            	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                                                                                                                                                                                                                                            <li class="item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="item">
                                 <img src="img\animales\animal8.jpg" width="140" alt="Imagen animal 8" />
                                 </a>                            </li>
-                                            	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	                                	            			</ul>
-			<div id="brands-prev"></div>
-			<div id="brands-next"></div>
-		</div>
-	</div>
-	<script type="text/javascript">
-		jQuery('#list-featured-brands').carouFredSel({
-			auto: false,
-			prev: "#brands-prev",
-			next: "#brands-next",
-			items: {
-				visible: 4
-			}
-			/*width: 840,
-			onCreate: function () {
-			    jQuery('#list-featured-brands .caroufredsel_wrapper').css("width","840px");
-			}*/
-		});
-	</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+      <div id="brands-prev"></div>
+      <div id="brands-next"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    jQuery('#list-featured-brands').carouFredSel({
+      auto: false,
+      prev: "#brands-prev",
+      next: "#brands-next",
+      items: {
+        visible: 4
+      }
+      /*width: 840,
+      onCreate: function () {
+          jQuery('#list-featured-brands .caroufredsel_wrapper').css("width","840px");
+      }*/
+    });
+  </script>
 <div class="wrapper-carousel-mini">
-	<h2 class="title">Top ventas</h2>
-	    <div class="category-products col2-left-grid">
+  <h2 class="title">Top ventas</h2>
+      <div class="category-products col2-left-grid">
                 <ol class="mini-products-list products-grid" id="block-related">
                                                             <li class="item">
                 <a href="http://animalear.com/bebedero-puddle-drink-gobi-2-tama-os.html" title="Bebedero Puddle Drink Gobi (2 tamaños)" class="product-image"><img src="http://media.animalear.com/media/catalog/product/cache/1/small_image/160x/9df78eab33525d08d6e5fb8d27136e95/b/e/bebedero-puddle-drink-gobi-2-tamanos.jpg" alt="Comprar Bebedero Puddle Drink Gobi (2 tamaños)" /></a>
@@ -1503,53 +1551,53 @@ Nuestra utopía, por tanto, es el llegar a unir a todos los amantes de los anima
             }
         }
     </script>
-	                </div>
+                  </div>
 
 
 <!-- División izquierda -->
-	    
-        <div class="col-left sidebar">	
+      
+        <div class="col-left sidebar">  
             <div class="layer-search-optimization">
-	            <div class="layer-no-pet">
-				    <span>Confia en nosotros, <a href="http://www.adoptaloo.com/">dejanos encontrarte una mascota</a></span>
-			    </div>
+              <div class="layer-no-pet">
+            <span>Confia en nosotros, <a href="http://www.adoptaloo.com/">dejanos encontrarte una mascota</a></span>
+          </div>
             </div>
             <div class="block block-layered-nav amshopby-filters-left">
 <!-- imagen gatito -->
                 <IMG SRC="img\banner_iz.jpg">
                 <!--
                 <div class="block-content">
-		        	<dl id="narrow-by-list">            		                		                		                		                		                			                			                	<dt>Categoría</dt>
-			            <dd>
+              <dl id="narrow-by-list">                                                                                                                                                              <dt>Categoría</dt>
+                  <dd>
                             <ol   >
                                 <li class="amshopby-advanced">
                                 <ol>
                                     <li class="amshopby-cat level0"><a href="http://animalear.com/reptiles/terrarios.html">Terrarios</a></li><li class="amshopby-cat level0 has-child "><a href="http://animalear.com/reptiles/accesorios-terrarios.html">Accesorios terrarios</a><ul><span class="icon"><span class="symbol"></span></span><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/accesorios-terrarios/refugios.html">Refugios para terrarios</a></li><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/accesorios-terrarios/control-humedad.html">Control humedad</a></li><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/accesorios-terrarios/control-temperatura.html">Control temperatura</a></li></ul></li><li class="amshopby-cat level0"><a href="http://animalear.com/reptiles/decoracion-terrario.html">Decoración terrarios</a></li><li class="amshopby-cat level0 has-child "><a href="http://animalear.com/reptiles/luz-y-calefaccion.html">Luz y calefacción</a><ul><span class="icon"><span class="symbol"></span></span><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/luz-y-calefaccion/iluminacion.html">Iluminación</a></li><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/luz-y-calefaccion/calefaccion.html">Calefacción</a></li></ul></li><li class="amshopby-cat level0"><a href="http://animalear.com/reptiles/comida-para-reptiles.html">Comida para reptiles</a></li><li class="amshopby-cat level0"><a href="http://animalear.com/reptiles/higiene-y-salud.html">Higiene y salud</a></li><li class="amshopby-cat level0"><a href="http://animalear.com/reptiles/comederos.html">Comederos para reptiles</a></li><li class="amshopby-cat level0"><a href="http://animalear.com/reptiles/sustratos-y-arenas.html">Sustratos y arenas</a></li><li class="amshopby-cat level0 has-child "><a href="http://animalear.com/reptiles/tortugas.html">Tortugas</a><ul><span class="icon"><span class="symbol"></span></span><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/tortugas/comida-para-tortugas.html">Comida para tortugas</a></li><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/tortugas/accesorios-para-tortugas.html">Accesorios para tortugas</a></li><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/tortugas/tortugueras.html">Tortugueras</a></li><li class="amshopby-cat level1"><a href="http://animalear.com/reptiles/tortugas/vitaminas-y-calcio.html">Vitaminas y calcio</a></li></ul></li>            </ol>
                                         <script type="text/javascript">
-                            				jQuery("li.amshopby-advanced .icon").click(function () {
-                            					jQuery(this).toggleClass('expanded');
-                            					jQuery(this).parent().parent().toggleClass('expanded');
-                            				});
+                                    jQuery("li.amshopby-advanced .icon").click(function () {
+                                      jQuery(this).toggleClass('expanded');
+                                      jQuery(this).parent().parent().toggleClass('expanded');
+                                    });
                                         </script>
                                     </li>
                                 </ol>
                         </dd>
-			         </dl>
-		        		    </div>
+               </dl>
+                    </div>
 
-		<div style="display:none" class="amshopby-overlay"></div></div>
+    <div style="display:none" class="amshopby-overlay"></div></div>
 </div>
  -->
 <!-- Fin menu izquierda -->
-	            </div>
-	        </div>
-	    </div>
-	        </div>
+              </div>
+          </div>
+      </div>
+          </div>
 
 
-	<div class="footer-wave-grey-top"></div>
+  <div class="footer-wave-grey-top"></div>
     <div class="footer-wrapper">
-	    <div class="footer-container">
+      <div class="footer-container">
     <div class="footer" role="contentinfo">
         <div class="footer-information">
 <div class="section">
@@ -1599,16 +1647,16 @@ Nuestra utopía, por tanto, es el llegar a unir a todos los amantes de los anima
     jQuery(".trust-online.hovercard").click(function () {
         jQuery(".hovercard-active", this).toggle();
     });
-</script>	</div>
-    				<div id="register-now-wrapper" style="display: none">
-			<div id="register-now">
-				<span>Configura tu mascota y te <span class="bold">REGALAMOS un 5% de DESCUENTO</span> en tu próxima compra</span>
+</script> </div>
+            <div id="register-now-wrapper" style="display: none">
+      <div id="register-now">
+        <span>Configura tu mascota y te <span class="bold">REGALAMOS un 5% de DESCUENTO</span> en tu próxima compra</span>
                 <div class="banner-button-close"></div>
                 <button id="banner-como-es-tu-mascota" class="button" onclick="location.href='http://animalear.com/animalear/account/create/';"><span><span>Dinos cómo es tu mascota</span></span></button>
-			</div>
-		</div>
-		<script type="text/javascript">
-			jQuery(document).ready(function () {
+      </div>
+    </div>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
                 if (!Mage.Cookies.get('banner-discount')) {
                     jQuery(".footer-container").css("padding-bottom", 84);
                     document.getElementById('register-now-wrapper').style.display = '';
@@ -1620,94 +1668,94 @@ Nuestra utopía, por tanto, es el llegar a unir a todos los amantes de los anima
                     jQuery(".footer-container").css("padding-bottom", 0);
                     document.getElementById('register-now-wrapper').style.display = 'none';
                 });
-			});
+      });
         </script>
-	<!-- BrainSINS Code Starts -->
+  <!-- BrainSINS Code Starts -->
 <script type='text/javascript'>
-									var bs = document.createElement('script');
-			bs.type = 'text/javascript';
-			bs.async = true;
-			bs.src = (document.location.protocol == 'https:' ? 'https://d2xkqxdy6ewr93.cloudfront.net' : 'http://clients.cdn.brainsins.com') + "/brainsins.js" ;
-			var head = document.getElementsByTagName('head')[0];
-			head.appendChild(bs);
-				brainsins_token = "BS-1126548200-1";
-		var brainsins_api_mode = "B";		
-					var BrainSINSData = {
-						pageType: 'category',
-						currency: 'EUR',
-						language: 'default',
-						categoryId: 697,
-						categories: '697'};													</script>
+                  var bs = document.createElement('script');
+      bs.type = 'text/javascript';
+      bs.async = true;
+      bs.src = (document.location.protocol == 'https:' ? 'https://d2xkqxdy6ewr93.cloudfront.net' : 'http://clients.cdn.brainsins.com') + "/brainsins.js" ;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(bs);
+        brainsins_token = "BS-1126548200-1";
+    var brainsins_api_mode = "B";   
+          var BrainSINSData = {
+            pageType: 'category',
+            currency: 'EUR',
+            language: 'default',
+            categoryId: 697,
+            categories: '697'};                         </script>
 <script type="text/javascript">
-		function bsTrackProductCallback() {
-			var cookies = BrainSINS.Cookies;
-			var constants = BrainSINS.Constants;
-			var url = cookies.get(constants.urlNext);
-			self.location = url;
-			return false;
-		};
-		function bsTrackProductClicked(productId, idRecommendation, idPrevPage, url) {
-			var cookies = BrainSINS.Cookies;
-			var constants = BrainSINS.Constants;
-			cookies.set(constants.urlNext, url, constants.daysInCookie);
-			cookies.set(constants.idRecommendation, idRecommendation,
-					constants.daysInCookie);
-			cookies.set(constants.idPrevPage, idPrevPage, constants.daysInCookie);
-			BrainSINSTracker.trackProductview(productId, "bsTrackProductCallback");
-			return false;
-		};
+    function bsTrackProductCallback() {
+      var cookies = BrainSINS.Cookies;
+      var constants = BrainSINS.Constants;
+      var url = cookies.get(constants.urlNext);
+      self.location = url;
+      return false;
+    };
+    function bsTrackProductClicked(productId, idRecommendation, idPrevPage, url) {
+      var cookies = BrainSINS.Cookies;
+      var constants = BrainSINS.Constants;
+      cookies.set(constants.urlNext, url, constants.daysInCookie);
+      cookies.set(constants.idRecommendation, idRecommendation,
+          constants.daysInCookie);
+      cookies.set(constants.idPrevPage, idPrevPage, constants.daysInCookie);
+      BrainSINSTracker.trackProductview(productId, "bsTrackProductCallback");
+      return false;
+    };
 
-		function bsGetCookie(name) {
-			var value = "; " + document.cookie;
-			var parts = value.split("; " + name + "=");
-			if (parts.length == 2) 
-				return parts.pop().split(";").shift();
-			return "";
-		}
+    function bsGetCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) 
+        return parts.pop().split(";").shift();
+      return "";
+    }
 
-		function bsSetCookie(propertyName, value, domain) {
-			document.cookie = propertyName + "=" + encodeURI(value) + ";path=/"
-			+ ";max-age=31536000" + (domain != null ? ";domain=" + domain : "");			
-		}		
+    function bsSetCookie(propertyName, value, domain) {
+      document.cookie = propertyName + "=" + encodeURI(value) + ";path=/"
+      + ";max-age=31536000" + (domain != null ? ";domain=" + domain : "");      
+    }   
 
-		function bsUnsetCookie(propertyName, domain) {
-			document.cookie = propertyName + "='';path=/"
-			+ ";max-age=0" + (domain != null ? ";domain=" + domain : "");	
-		}
+    function bsUnsetCookie(propertyName, domain) {
+      document.cookie = propertyName + "='';path=/"
+      + ";max-age=0" + (domain != null ? ";domain=" + domain : ""); 
+    }
 
-		
-		function requestBrainSINSRecommendations(storeUrl, recommenderId, template, div, maxResults, productId, userId, filterCategories, filterLevel, callback, debug) {
-			
-			if (productId == null) productId = BrainSINSData.productId;
-			
-			if (userId == null) userId = bsGetCookie("bsCoId");
-			
-			var url = storeUrl + "/brainsins/recommendation/recommendations";
-			url += "?recommenderId=" + recommenderId;
-			url += "&template=" + template;
-			url += productId == null ? "" : "&productId=" + productId;
-			url += userId == null ? "" : "&userId=" + userId;
-			url += maxResults == null ? "" : "&maxResults=" + maxResults;
-			url += filterCategories == null ? "" : "&filterCategories=" + filterCategories;
-			url += filterLevel == null ? "" : "&filterLevel=" + filterLevel;
+    
+    function requestBrainSINSRecommendations(storeUrl, recommenderId, template, div, maxResults, productId, userId, filterCategories, filterLevel, callback, debug) {
+      
+      if (productId == null) productId = BrainSINSData.productId;
+      
+      if (userId == null) userId = bsGetCookie("bsCoId");
+      
+      var url = storeUrl + "/brainsins/recommendation/recommendations";
+      url += "?recommenderId=" + recommenderId;
+      url += "&template=" + template;
+      url += productId == null ? "" : "&productId=" + productId;
+      url += userId == null ? "" : "&userId=" + userId;
+      url += maxResults == null ? "" : "&maxResults=" + maxResults;
+      url += filterCategories == null ? "" : "&filterCategories=" + filterCategories;
+      url += filterLevel == null ? "" : "&filterLevel=" + filterLevel;
 
-			url += "&rnd=" + new Date().getTime();
-			//brainsins/smartecommerce/test.phtml
-			if (debug) {
-				console.log(url);
-			}
-			new Ajax.Request(url,
-					{ method: "get",
-					onSuccess: function(transport) {
-		    			document.getElementById(div).innerHTML = transport.responseText;
+      url += "&rnd=" + new Date().getTime();
+      //brainsins/smartecommerce/test.phtml
+      if (debug) {
+        console.log(url);
+      }
+      new Ajax.Request(url,
+          { method: "get",
+          onSuccess: function(transport) {
+              document.getElementById(div).innerHTML = transport.responseText;
                         if (typeof callback == "function") {
                             callback();
                         }
-					}}
-					);
-			
-		}
-	</script>
+          }}
+          );
+      
+    }
+  </script>
 <!-- BrainSINS Code Ends -->
 </div>
 
@@ -1730,3 +1778,4 @@ Nuestra utopía, por tanto, es el llegar a unir a todos los amantes de los anima
     <!-- Fi Google RMKT -->
 </body>
 </html>
+

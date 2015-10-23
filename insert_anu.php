@@ -1065,11 +1065,11 @@ function login(){
                             <a href="index.html" title="Ir a la p&aacute;gina Mascotas Perdidas" itemprop="url"><span itemprop="title">Mascotas_Perdidas</span></a>
                                         <span>&gt; </span>
                               </li>
-                        <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a href="Anuncios.php" title="Ir a la p&aacute;gina Anuncios Mascotas Perdidas" itemprop="url"><span itemprop="title">Anuncios</span></a>
-                                        <span>&gt; </span>
-                              </li>
-            </ul>
+                    <li class="home" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="form_anu.html" title="Ir a la p&aacute;gina Introducir anuncios" itemprop="url"><span itemprop="title">Introducir_anuncios</span></a>
+              <span>&gt; </span>
+            </li>
+              </ul>
 </div>
 </div>
 	                <h1 class="extra-red">Mascotas Perdidas</h1>
@@ -1090,85 +1090,51 @@ function login(){
 
     <div class="page-title category-title">
     </div>
-
     <a href="form_anu.html">
   <img id="banner-category" src="img\cate-revento.jpg" alt="anuncio"/>
     </a>
 <!-- Titulo -->
-        		<h2>Anuncios</h2>
+        		<h2></h2>
 
 <div >
 
 
 <div id="anun" style="display:block";>
 <?php
-      //realizamos la conexión con mysql
-      $con = mysqli_connect('localhost', 'root', '', 'bd_botiga_animals');
-
-      //como la sentencia SIEMPRE va a buscar todos los registros de la tabla tbl_anunci, pongo en la variable $sql.
-      $sql = "SELECT * FROM tbl_anunci,tbl_contacte WHERE tbl_anunci.contact_id=tbl_contacte.contact_id";
-      
-        if(!empty($_REQUEST['municipio'])){
-          $sql.=" AND tbl_anunci.mun_id=$_REQUEST[municipio]"; //Añadimos la busqueda del municipio
-
-        } else {
-          // no añadimos municipio a la busqueda para que busque todos
-        }
-        if(empty($_REQUEST['perros']) && empty($_REQUEST['gatos']) && empty($_REQUEST['pajaros']) && empty($_REQUEST['otros'])){
-          if(!empty($_REQUEST['opcion'])){
-            if($_REQUEST['opcion']==1){
-              $sql.=" AND raca_id BETWEEN 8 AND 14";
-            } else if ($_REQUEST['opcion']==2){
-              $sql.=" AND raca_id BETWEEN 15 AND 19";
-            } else if ($_REQUEST['opcion']==3){
-              $sql.=" AND raca_id BETWEEN 20 AND 21";
-            } else {
-              $sql.=" AND raca_id BETWEEN 22 AND 26";
-            }
-          } else {
-            // no añadimos animal a la busqueda para que busque todos
-          }
-        } else if (!empty($_REQUEST['perros'])){
-          $sql.=" AND raca_id=$_REQUEST[perros]";
-        } else if (!empty($_REQUEST['gatos'])){
-          $sql.=" AND raca_id=$_REQUEST[gatos]";
-        } else if (!empty($_REQUEST['pajaros'])){
-          $sql.=" AND raca_id=$_REQUEST[pajaros]";
-        } else {
-          $sql.=" AND raca_id=$_REQUEST[otros]";
-        }
-      //lanzamos la sentencia sql
-      $datos = mysqli_query($con, $sql);
-      
-      if(mysqli_num_rows($datos)>0){ // vemos si hay resultados o no en la busqueda realizada, si hay realizamos el muestreo de los datos
-        
-        while($anuncio = mysqli_fetch_array($datos)){
-          echo "<b>Anuncio:</b> $anuncio[anu_contingut]<br/>";
-          echo "<b>Fecha anuncio:</b> $anuncio[anu_data]<br/>";
-          echo "<b>Estado:</b> $anuncio[anu_tipus]<br/>";
-          echo "<b>Nombre de contacto:</b> $anuncio[contact_nom]<br/>";
-          echo "<b>Teléfono de contacto:</b> $anuncio[contact_telf]<br/>";
-          if(!empty($anuncio['anu_foto'])){
-            $fichero="img/$anuncio[anu_foto]";
-            if(file_exists($fichero)){
-              //en el caso que la imagen exista, la muestra por pantalla
-              echo "<img src='$fichero' width='250'><br/><br/>";
-            } else {
-              echo "<img src='img/no_disponible.jpg' width='250'><br/><br/>"; //mostramos una imagen de 'imagen no disponible' en el caso que no exista el fichero en la ubicación
-            }
-          } else {
-              //si la imagen del producto no existe, cargaremos una imagen de 'imagen no disponible'
-              echo "<img src='img/no_disponible.jpg' width='250'><br/><br/>";
-          }
-        }
-      } else { // si no hay datos en la busqueda mostramos por pantalla que no hay resultados en la busqueda realizada
-        echo "<b>No hay resultados</b> <br/><br/>";
-      }
-      //cerramos la conexión con la base de datos
-      mysqli_close($con);
-    ?>
-
+  //Datos que recibimos del formulario
+  $rollo = $_REQUEST['rollo'];
+  $titul = $_REQUEST['titul'];
+  $perros = $_REQUEST['perros'];
+  $gatos = $_REQUEST['gatos'];
+  $pajaros = $_REQUEST['pajaros'];
+  $otros = $_REQUEST['otros'];
+  $municipio = $_REQUEST['municipio']; 
+  $contacto = $_REQUEST['contacto'];
+  $fecha = $_REQUEST['fecha'];
+  $anu_tip = $_REQUEST['anu_tip'];
+  //////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////
+  $con = mysqli_connect('localhost', 'root', '', 'bd_botiga_animals'); // conectamos a la base de datos
+  if($con == false){  //si falla la conexion a la base de datos mostramos un mensaje
+      echo "La conexión ha fallado"; 
+       
+  } else {
+    if(!empty($perros)){
+      mysqli_query($con, "INSERT INTO tbl_anunci (anu_contingut,anu_nom,anu_data,raca_id,mun_id,contact_id,anu_tipus) VALUES ('$rollo','$titul','$fecha','$perros','$municipio','$contacto','$anu_tip')");  
+    } else if (!empty($gatos)){
+      mysqli_query($con, "INSERT INTO tbl_anunci (anu_contingut,anu_nom,anu_data,raca_id,mun_id,contact_id,anu_tipus) VALUES ('$rollo','$titul','$fecha','$gatos','$municipio','$contacto','$anu_tip')");
+    } else if (!empty($pajaros)){
+      mysqli_query($con, "INSERT INTO tbl_anunci (anu_contingut,anu_nom,anu_data,raca_id,mun_id,contact_id,anu_tipus) VALUES ('$rollo','$titul','$fecha','$pajaros','$municipio','$contacto','$anu_tip')");
+    } else {
+      mysqli_query($con, "INSERT INTO tbl_anunci (anu_contingut,anu_nom,anu_data,raca_id,mun_id,contact_id,anu_tipus) VALUES ('$rollo','$titul','$fecha','$otros','$municipio','$contacto','$anu_tip')");
+    }
+  }
+  mysqli_close($con);//cerramos la conexión con la base de datos
+?>
+<p>Se han introducido los datos correctamente.</p>
 <button type="button" class="button yellow radius" onclick="location.href='index.html'")>volver</button>
+
+<br><br><br><br>
 </div>
 
 

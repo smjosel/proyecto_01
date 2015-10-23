@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2015 a las 00:24:54
+-- Tiempo de generación: 23-10-2015 a las 11:45:19
 -- Versión del servidor: 5.6.26
--- Versión de PHP: 5.5.28
+-- Versión de PHP: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bd_botiga_animals`
 --
-CREATE DATABASE IF NOT EXISTS `bd_botiga_animals` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `bd_botiga_animals`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `tbl_anunci` (
   `mun_id` int(11) NOT NULL,
   `contact_id` int(11) NOT NULL,
   `anu_tipus` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_anunci`
@@ -46,7 +44,16 @@ CREATE TABLE IF NOT EXISTS `tbl_anunci` (
 
 INSERT INTO `tbl_anunci` (`anu_id`, `anu_contingut`, `anu_nom`, `anu_data`, `anu_foto`, `raca_id`, `mun_id`, `contact_id`, `anu_tipus`) VALUES
 (1, 'Perdut gos de raça beagle a la platja de El Prat de Llobregat (zona aeroport) l''11 d''octubre al matí. Respon al nom de Tacat.', 'Perdut beagle a El Prat', '2015-10-11', 'tacat.jpg', 14, 4, 2, 'Perdut'),
-(2, 'Desaparegut gat amb collar i placa amb el nom de Ratlletes. És de tipus comú, ratllat de colors taronges. Rambla Badal, Barcelona.', 'Perdut gat', '2015-10-15', '', 17, 1, 6, 'Pedut');
+(2, 'Desaparegut gat amb collar i placa amb el nom de Ratlletes. És de tipus comú, ratllat de colors taronges. Rambla Badal, Barcelona.', 'Perdut gat', '2015-10-15', '', 17, 1, 6, 'Pedut'),
+(3, 'S''ha perdut un canari a la zona de Begues,es de color groc y negre.', 'Perdut canari', '2015-10-20', 'canario_amne.jpg', 20, 10, 8, 'Perdut'),
+(4, 'Perdut Husky de color blanc y gris. Es bastant grand y respon al nom de Thor.', 'Perdut Husky', '2015-10-18', 'husky_thor.jpg', 11, 13, 9, 'Perdut'),
+(5, 'He perdido a mi perro. Es un Border collie negro y blanco, con manchas marrones en la cara.', 'Perro perdido', '2015-10-07', 'border_c.jpg', 12, 10, 5, 'Perdut'),
+(6, 'He perdido un pato blanco y negro, con las alas verde oscuro.', 'Pato perdido', '2015-10-01', 'pato.jpg', 26, 11, 11, 'Perdut'),
+(7, 'He perdido un Border Collie de color blanco y marron, responde al nombre de chuky.', 'Se ha perdido perro', '2015-10-13', '', 12, 6, 5, 'Perdut'),
+(8, 'He encontrado un BÃ²xer marron con la barriga blanca. Lleva una placa en la que pone Coly.', 'He encontrado perro', '2015-10-20', '', 8, 13, 6, 'trobat'),
+(9, 'He perdido gato Bobtail de color blanco con manchas marrones y negras.', 'Gato perdido', '2015-10-22', 'bobtail.jpg', 19, 1, 2, 'Perdut'),
+(10, 'He encontrado un hurÃ³n gris con la cara blanca. Llevaba una correa roja.', 'Encontrado huron', '2015-10-21', 'huron.jpg', 22, 1, 9, 'trobat'),
+(13, 'He perdido un gato de la raza bosque de noruega. Es de color naranja oscuro y la cara naranja un poco mas clarito. Tambien tiene los ojos verde claro.', 'Perdido gatito', '2015-10-08', 'bosque_noruega.jpg', 28, 14, 6, 'Perdut');
 
 -- --------------------------------------------------------
 
@@ -59,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `tbl_contacte` (
   `contact_nom` varchar(25) NOT NULL,
   `contact_telf` varchar(9) NOT NULL,
   `contact_adre` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_contacte`
@@ -72,7 +79,11 @@ INSERT INTO `tbl_contacte` (`contact_id`, `contact_nom`, `contact_telf`, `contac
 (4, 'Isabel Vázquez', '698722284', ''),
 (5, 'Pedro Santiesteban', '656989931', 'Avinguda Carrilet, 54 3r'),
 (6, 'Sònia Gómez', '688341009', 'Gran Via de les Corts Catalanes, 12 Esc. A 3r 2a'),
-(7, 'Patricia Martín', '932124654', '');
+(7, 'Patricia Martín', '932124654', ''),
+(8, 'Albert Pérez', '635694435', ''),
+(9, 'Carlos Rodriguez', '645332745', ''),
+(10, 'Sara García', '626456674', ''),
+(11, 'Claudia Padilla', '647332974', '');
 
 -- --------------------------------------------------------
 
@@ -116,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `tbl_raca` (
   `raca_id` int(11) NOT NULL,
   `raca_nom` varchar(25) NOT NULL,
   `tipus_anim_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_raca`
@@ -141,7 +152,11 @@ INSERT INTO `tbl_raca` (`raca_id`, `raca_nom`, `tipus_anim_id`) VALUES
 (23, 'Conill', 4),
 (24, 'Hàmster', 4),
 (25, 'Teixó', 4),
-(26, 'Ànec', 4);
+(26, 'Ànec', 4),
+(27, 'Otros_P', 1),
+(28, 'Otros_G', 2),
+(29, 'Otros_Pa', 3),
+(30, 'Otros', 4);
 
 -- --------------------------------------------------------
 
@@ -210,12 +225,12 @@ ALTER TABLE `tbl_tipus_animal`
 -- AUTO_INCREMENT de la tabla `tbl_anunci`
 --
 ALTER TABLE `tbl_anunci`
-  MODIFY `anu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `anu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `tbl_contacte`
 --
 ALTER TABLE `tbl_contacte`
-  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `tbl_municipi`
 --
@@ -225,7 +240,7 @@ ALTER TABLE `tbl_municipi`
 -- AUTO_INCREMENT de la tabla `tbl_raca`
 --
 ALTER TABLE `tbl_raca`
-  MODIFY `raca_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
+  MODIFY `raca_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tipus_animal`
 --
