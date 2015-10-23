@@ -1141,13 +1141,15 @@ function login(){
       $datos = mysqli_query($con, $sql);
       
       if(mysqli_num_rows($datos)>0){ // vemos si hay resultados o no en la busqueda realizada, si hay realizamos el muestreo de los datos
-        
+        echo "<table>";
         while($anuncio = mysqli_fetch_array($datos)){
-          echo "<b>Anuncio:</b> $anuncio[anu_contingut]<br/>";
-          echo "<b>Fecha anuncio:</b> $anuncio[anu_data]<br/>";
-          echo "<b>Estado:</b> $anuncio[anu_tipus]<br/>";
-          echo "<b>Nombre de contacto:</b> $anuncio[contact_nom]<br/>";
-          echo "<b>Teléfono de contacto:</b> $anuncio[contact_telf]<br/>";
+          echo "<tr><td>";
+          echo utf8_encode("<b>Anuncio:</b> $anuncio[anu_contingut]<br/>");
+          echo utf8_encode("<b>Fecha anuncio:</b> $anuncio[anu_data]<br/>");
+          echo utf8_encode("<b>Estado:</b> $anuncio[anu_tipus]<br/>");
+          echo utf8_encode("<b>Nombre de contacto:</b> $anuncio[contact_nom]<br/>");
+          echo "<b>Tel&eacutefono de contacto:</b> $anuncio[contact_telf]<br/>";
+          echo "</td><td>";
           if(!empty($anuncio['anu_foto'])){
             $fichero="img/$anuncio[anu_foto]";
             if(file_exists($fichero)){
@@ -1161,9 +1163,11 @@ function login(){
               echo "<img src='img/no_disponible.jpg' width='250'><br/><br/>";
           }
         }
+        echo"</td></tr>";
       } else { // si no hay datos en la busqueda mostramos por pantalla que no hay resultados en la busqueda realizada
         echo "<b>No hay resultados</b> <br/><br/>";
       }
+      echo "</table>";
       //cerramos la conexión con la base de datos
       mysqli_close($con);
     ?>
